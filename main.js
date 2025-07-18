@@ -85,6 +85,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const saldoInicial = obtenerSaldoMensual(mesActual);
     const saldoFinal = saldoInicial - totalGasto;
     saldoTxt.textContent = "€" + saldoFinal.toFixed(2);
+
+    const ahorroBox = document.getElementById("ahorroRecomendado");
+    if (ahorroBox) {
+      const ahorro = saldoInicial * 0.30;
+      ahorroBox.textContent = "€" + ahorro.toFixed(2);
+    }
   }
 
   window.editarGasto = function (index) {
