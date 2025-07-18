@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transacciones</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#111827] text-white min-h-screen flex flex-col">
+  <header class="text-center p-4">
+    <h1 class="text-2xl font-bold">📋 Transacciones</h1>
+  </header>
+
+  <main class="p-4 space-y-4">
+    <h2 class="text-lg font-semibold mb-2">📅 Filtrar por mes</h2>
+    <select id="mesFiltro" class="select w-full bg-[#1F2937] text-white p-2 rounded">
+      <option value="-">- Mostrar todos</option>
+    </select>
+    <div id="listaGastos" class="space-y-4"></div>
+  </main>
+
+  
+<dialog id="modalConfirmar" class="rounded-xl shadow-lg p-6 bg-[#1F2937] text-white w-80 mx-auto">
+  <form method="dialog" class="space-y-4">
+    <p class="text-lg font-bold">¿Eliminar gasto?</p>
+    <p class="text-sm text-gray-400">Esta acción no se puede deshacer.</p>
+    <div class="flex justify-end gap-4">
+      <button class="btn bg-gray-600 text-white px-4 py-1 rounded">Cancelar</button>
+      <button id="btnConfirmarEliminar" class="btn bg-red-600 text-white px-4 py-1 rounded">Eliminar</button>
+    </div>
+  </form>
+</dialog>
+
+
+  <nav class="bg-[#1F2937] flex justify-around py-3 fixed bottom-0 w-full text-xl border-t border-gray-700">
+    <a href="index.html" title="Inicio">🏠</a>
+    <a href="transacciones.html" title="Gastos">📋</a>
+    <a href="anadir.html" title="Añadir">➕</a>
+    
+  </nav>
+
+  
+
+  <script>
+    document.getElementById("anioFooter").textContent = new Date().getFullYear();
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>
