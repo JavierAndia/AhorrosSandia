@@ -12,7 +12,7 @@
 <body class="bg-[#111827] text-white min-h-screen flex flex-col">
   <main class="px-4 pt-4 pb-24 max-w-md w-full mx-auto">
     <form id="formGasto" class="bg-[#1F2937] rounded-xl p-6 space-y-4 shadow">
-      <input type="number" id="monto" placeholder="Cantidad (€)" required class="w-full p-2 rounded font-bold bg-[#fffff] text-black" />
+      <input type="number" id="monto" step="0.01"placeholder="Cantidad (€)" required class="w-full p-2 rounded font-bold bg-[#fffff] text-black" />
       <select id="categoria" required class="w-full p-2 rounded bg-[#fffff] text-black">
         <option value="" disabled selected class="font-bold">Selecciona una categoría</option>
         <option class="font-bold">Comida</option><option class="font-bold">Fiesta</option><option class="font-bold">Compras</option>
