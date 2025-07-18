@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Editar Gasto</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#111827] text-white min-h-screen flex flex-col">
+  <main class="px-4 pt-4 pb-24 max-w-md w-full mx-auto">
+    <form id="formGasto" class="bg-[#1F2937] rounded-xl p-6 space-y-4 shadow">
+      <input type="number" id="monto" placeholder="Cantidad (€)" required class="w-full p-2 rounded bg-[#2c2c2c] text-white" />
+      <select id="categoria" required class="w-full p-2 rounded bg-[#2c2c2c] text-white">
+        <option value="" disabled selected>Selecciona una categoría</option>
+        <option>Comida</option><option>Fiesta</option><option>Compras</option>
+        <option>Transporte</option><option>Suscripciones</option><option>Otros</option>
+      </select>
+      <input type="date" id="fecha" required class="w-full p-2 rounded bg-[#2c2c2c] text-white" />
+      <input type="text" id="comentario" placeholder="Comentario (opcional)" class="w-full p-2 rounded bg-[#2c2c2c] text-white" />
+      <div class="flex justify-between">
+        <a href="transacciones.html" class="bg-gray-600 text-white font-bold py-2 px-4 rounded-xl shadow">← Atrás</a>
+        <button type="submit" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-xl shadow">Guardar Cambios</button>
+      </div>
+    </form>
+  </main>
+
+  <nav class="bg-[#1F2937] flex justify-around py-3 fixed bottom-0 w-full text-xl border-t border-gray-700">
+    <a href="index.html" title="Inicio">🏠</a>
+    <a href="transacciones.html" title="Gastos">📋</a>
+    <a href="anadir.html" title="Añadir">➕</a>
+  </nav>
+
+  <script src="main.js"></script>
+</body>
+</html>
